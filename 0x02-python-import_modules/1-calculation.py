@@ -4,7 +4,8 @@ if __name__ == "__main__":
     a = 10
     b = 5
 
-    print("%d + %d = %d"%(a, b, calc.add(a, b)))
-    print("%d - %d = %d"%(a, b, calc.sub(a, b)))
-    print("%d * %d = %d"%(a, b, calc.mul(a, b)))
-    print("%d / %d = %d"%(a, b, int(calc.div(a, b))))
+
+    print(a, " + ", b, "=", calc.add(a,b))
+    print(a, " - ", b, "=", calc.sub(a,b))
+    print(a, " * ", b, "=", calc.mul(a,b))
+    print(a, " / ", b, "=", int(calc.div(a,b)))
