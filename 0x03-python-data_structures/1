@@ -1,5 +1,17 @@
 #!/usr/bin/python3
-def element_at(my_list, idx):
-    if (idx < 0) or (idx > len(my_list)):
-        return
-    return my_list[idx]
+def multiple_returns(sentence):
+    new_tup = ""
+    #tup = (("Length: {:d} - First character: {}".format(len(sentence, sentence[0])))
+    tup = (len(sentence), sentence[0])
+    """
+    for i in tup:
+        print(i, end="")
+    print(type(tup))
+    return new_tup
+    """
+    return (tup)
+
+sentence = "2t school, I      learnt C!"
+length, first = multiple_returns(sentence)
+print("Length: {:d} - First character: {}".format(length, first))
+#print(multiple_returns("lilian is a girl"))
