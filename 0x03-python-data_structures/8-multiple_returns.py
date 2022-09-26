@@ -4,7 +4,3 @@ def multiple_returns(sentence):
     first_char = sentence[0] if length > 0 else "None"
     tup = length, first_char
     return(tup)
-sentence = ()
-length, first = multiple_returns(sentence)
-print("Length: {:d} - First character: {}".format(length, first))
-
