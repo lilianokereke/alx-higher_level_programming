@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-
-def complex_delete(a_dict, value):
-
-    if a_dict is None:
-        return None
-    del_key = None
-    keys = tuple(a_dict.keys())
-    for key in keys:
-        if a_dict[key] == value:
-            del a_dict[key]
-    return a_dict
+def complex_delete(my_dict, value):
+    targets = []
+    for key, key_value in my_dict.items():
+        if key_value is value:
+            targets.append(key)
+    for x in targets:
+        del my_dict[x]
+    return(my_dict)
