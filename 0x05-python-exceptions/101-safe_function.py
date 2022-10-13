@@ -1,34 +1,20 @@
 #!/usr/bin/python3
-from sys import stderr
+
+import sys
 
 
 def safe_function(fct, *args):
+    """Executes a function safely.
+    Args:
+        fct: The function to execute.
+        args: Arguments for fct.
+    Returns:
+        If an error occurs - None.
+        Otherwise - the result of the call to fct.
+    """
     try:
-        return  fct(*args) 
-    except (ZeroDivisionError, Exception) as ex:
-        stderr.write("Exception: {}".format(ex))
-        return fct(*args)
-    
-
-
-
-def my_div(a, b):
-    return a / b
-
-result = safe_function(my_div, 10, 2)
-print("result of my_div: {}".format(result))
-
-result = safe_function(my_div, 10, 0)
-print("result of my_div: {}".format(result))
-
-
-def print_list(my_list, len):
-    i = 0
-    while i < len:
-        print(my_list[i])
-        i += 1
-    return len
-
-result = safe_function(print_list, [1, 2, 3, 4], 10)
-print("result of print_list: {}".format(result))
-
+        result = fct(*args)
+        return (result)
+    except:
+        print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
+        return (None)
