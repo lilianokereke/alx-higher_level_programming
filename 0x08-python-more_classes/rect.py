@@ -87,19 +87,19 @@ class Rectangle:
         Returns:
             rect: a rectangle generated from a user defined height and width
         """
-        rect = []
+        rect = ""
         if self.__height == 0 or self.__width == 0:
             return ("")
 
         else:
-            for self.length in range(self.height):
-                rect += (str(self.print_symbol) * self.width) + "\n"
+            for self.length in range(self.__height):
+                rect += (str(self.print_symbol) * self.__width) + "\n"
 
             return ("".join(rect[:-1]))
 
     def __repr__(self):
         """
-        A method to recreate the rectangle.
+        A module to recreate the rectangle.
         Returns:
             string representation of the rectangle
         """
@@ -117,9 +117,8 @@ class Rectangle:
             rect_1 (int): the dimensions of rectangle 1
             rect_2 (int): the dimensions of rectangle 2
         """
-        if not isinstance(rect_1, Rectangle):
+        if not (isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        return (max(rect_1.area(), rect_2.area()))
+        elif not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        return max(rect_1.area(),rect_2.area())
