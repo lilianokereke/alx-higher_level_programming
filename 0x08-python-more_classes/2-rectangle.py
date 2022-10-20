@@ -26,7 +26,7 @@ class Rectangle:
     def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
 
@@ -39,7 +39,7 @@ class Rectangle:
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
@@ -51,4 +51,4 @@ class Rectangle:
         """A perineter method"""
         if self._width == 0 or self._height == 0:
             return 0
-        return (self.__height * 2) + (self.__width * 2)
+        return (self.__height + self.__width) * 2
