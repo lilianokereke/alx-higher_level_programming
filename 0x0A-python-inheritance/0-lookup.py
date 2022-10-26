@@ -1,13 +1,7 @@
 #!/usr/bin/python3
-
-"""This module contains the `lookup()` function."""
+"""Defines an object attribute lookup function."""
 
 
 def lookup(obj):
-    """Returns all attributes of an object.
-            Args:
-             obj(Any): The object
-    """
-    if obj is None:
-        return []
-    return dir(obj)
+    """Return a list of an object's available attributes."""
+    return (dir(obj))
