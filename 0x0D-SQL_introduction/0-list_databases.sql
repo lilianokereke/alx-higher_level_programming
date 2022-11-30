@@ -1,1 +1,2 @@
-show databases
+-- Command to list all dataases
+SHOW DATABASES
